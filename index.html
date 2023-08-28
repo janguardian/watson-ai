@@ -6,14 +6,14 @@
   <title>Watson AI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body class="page">
   <header class="header">
     <div class="header__container">
       <img class="header__logo" src="./images/logo.svg" alt="Watson AI logo.">
-      <a class="button" href="#">Try Now</a>
+      <a class="button" href="https://apps.apple.com/app/watson-ai-business-assistant/id6452471654?src=AppAgg.com&mt=12">Try Now</a>
     </div>
   </header>
   <section class="promo">
@@ -23,7 +23,7 @@
         <h1 class="promo__heading">Reveal the full power of ChatGPT on your Mac</h1>
       </header>
       <div class="promo__action">
-        <a class="promo__button" href="#">Download</a>
+        <a class="promo__button" href="https://apps.apple.com/app/watson-ai-business-assistant/id6452471654?src=AppAgg.com&mt=12">Download</a>
         <span class="promo__location">From AppStore</span>
       </div>
       <picture class="promo__image">
@@ -31,9 +31,9 @@
         <img src="./images/macbook.png" alt="MacBook with Watson AI running on it.">
       </picture>
     </div>
-    <button class="promo__scroll"></button>
+    <a class="promo__scroll" href="#toolkit" data-scroll></a>
   </section>
-  <section class="toolkit">
+  <section class="toolkit" id="toolkit">
     <div class="toolkit__container">
       <header class="toolkit__header">
         <h2 class="toolkit__heading">AI Business Toolkit</h2>
@@ -84,9 +84,9 @@
       <div class="industries__content">
         <header class="industries__header">
           <h2 class="industries__heading">Way beyond chat</h2>
-          <p class="industries__tagline">Don’t fall behind<br>the AI revolution.<br>10x your productivity</p>
+          <p class="industries__tagline">The full power of AI<br>for your business tasks.<br>10x your productivity</p>
         </header>
-        <button class="industries__button">Try Now</button>
+        <a class="industries__button" href="https://apps.apple.com/app/watson-ai-business-assistant/id6452471654?src=AppAgg.com&mt=12">Try Now</a>
       </div>
       <div class="industries__tags">
         <div class="industries__tag">💻</div>
@@ -114,7 +114,7 @@
         <source srcset="./images/interface.png 1x, ./images/interface@2x.png 2x" type="image/png">
         <img src="./images/interface.png" alt="Watson AI propmts example.">
       </picture>
-      <button class="prompts__button">Start using WatsonAI</button>
+      <a class="prompts__button" href="https://apps.apple.com/app/watson-ai-business-assistant/id6452471654?src=AppAgg.com&mt=12">Start using WatsonAI</a>
     </div>
   </section>
   <footer class="footer">
@@ -129,5 +129,15 @@
       </div>
     </div>
   </footer>
+  <script>
+    const handleClick = (event) => {
+      event.preventDefault()
+      const scrollSelector = event.target.getAttribute('href')
+      const elementToScrollTo = document.querySelector(scrollSelector)
+      elementToScrollTo.scrollIntoView({ behavior: 'smooth' })
+    }
+    const scrollButton = document.querySelector('[data-scroll]')
+    scrollButton.addEventListener('click', handleClick)
+  </script>
 </body>
 </html>
